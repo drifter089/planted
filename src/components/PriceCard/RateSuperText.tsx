@@ -2,7 +2,7 @@ import React from 'react'
 
 const RateSuperText = () => {
   return (
-    <div className="flex-grow-0 flex-shrink-0 w-[10rem] h-[9rem] relative bg-slate-500">
+    <div className="flex-grow-0 flex-shrink-0 w-[10rem] h-[8rem] relative">
       <p className="w-[7rem] h-[4rem] absolute left-0 top-[1rem] text-[4rem] font-bold text-left">
         $10
       </p>
