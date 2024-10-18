@@ -1,6 +1,6 @@
 import BasicCard from '@/components/BasicCard/BasicCard'
 import Hero from '@/components/Hero/Hero'
-import { PriceCard } from '@/components/PriceCard/PriceCard'
+import PriceCardSection from '@/components/PricecardSection/PriceCardSection'
 import React from 'react'
 
 const page = () => {
@@ -9,7 +9,7 @@ const page = () => {
       <Hero />
       <BasicCard />
       <BasicCard reverse={true} />
-      <PriceCard />
+      <PriceCardSection />
     </div>
   )
 }
