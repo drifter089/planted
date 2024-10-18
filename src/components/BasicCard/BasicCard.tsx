@@ -19,7 +19,7 @@ const BasicCard: React.FC<BasicCardProps> = ({ reverse }) => {
           </p>
         </div>
       </div>
-      <div className="flex-1 bg-[url('http://localhost:3000/api/media/file/hero_image.png')] bg-cover bg-no-repeat bg-center min-w-96 min-h-[350px]"></div>
+      <div className="flex-1 bg-[url('http://localhost:3000/api/media/file/heroo_image.png')] bg-cover bg-no-repeat bg-center min-w-96 min-h-[350px]"></div>
     </div>
   )
 }

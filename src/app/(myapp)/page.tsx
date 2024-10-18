@@ -6,7 +6,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center align-middle box-border mt-20 gap-20  mb-36 pb-80">
+    <div className="flex flex-col w-screen justify-center items-center align-middle box-border mt-20 gap-20  mb-36 pb-80 overflow-hidden">
       <Hero />
       <BasicCard />
       <BasicCard reverse={true} />
