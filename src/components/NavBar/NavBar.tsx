@@ -2,7 +2,7 @@ import React from 'react'
 
 const NavBar = () => {
   return (
-    <div className="sticky flex justify-center items-center gap-72 flex-1">
+    <div className="w-screen overflow-hidden flex justify-center items-center gap-72 flex-1">
       <div className="w-[113px] h-[38px] text-black text-[32px] font-bold font-['Roboto']">
         Planted
       </div>

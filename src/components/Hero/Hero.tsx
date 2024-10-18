@@ -15,7 +15,6 @@ const Hero = () => {
           className="object-cover"
         />
       </div>
-      <Button>asgfeg</Button>
     </div>
   )
 }
