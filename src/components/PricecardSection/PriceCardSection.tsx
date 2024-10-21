@@ -3,7 +3,7 @@ import { PriceCard } from './PriceCard/PriceCard'
 
 const PriceCardSection = () => {
   return (
-    <div className="bg-[#FFF7E7] w-screen h-screen flex justify-center items-center gap-28">
+    <div className="bg-[#FFF7E7] w-screen h-auto py-16 flex justify-center items-center gap-28 flex-wrap">
       <PriceCard
         quantityOne={5}
         productOne={'Seeds'}

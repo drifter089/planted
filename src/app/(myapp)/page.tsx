@@ -7,11 +7,11 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="w-[screen] overflow-hidden flex flex-col justify-center items-center align-middle box-border mt-20 gap-20">
+    <div className="w-[screen] overflow-hidden flex flex-col justify-center items-center align-middle box-border mt-20 gap-11 md:gap-20">
       <Hero />
       <BasicCard />
       <BasicCard reverse={true} />
-      <TextBanner subGreenText={'our plans'} mainText={'plants that survive'} />
+      <TextBanner subGreenText={'our plants'} mainText={'plants that survive'} />
       <PriceCardSection />
       <TextBanner subGreenText={'our seeds'} mainText={'choose from 40+ seeds'} />
       <PlantCarousel />
