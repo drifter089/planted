@@ -18,7 +18,7 @@ export function PlantCarousel() {
       opts={{
         align: 'center',
       }}
-      className="w-[85vw]"
+      className="w-[70vw] md:w-[85vw]"
     >
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
