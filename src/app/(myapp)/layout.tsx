@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer/Footer'
 import NavBar from '@/components/NavBar/NavBar'
 import '@/styles/globals.css'
 
@@ -11,7 +12,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="overflow-x-hidden w-screen m-0 p-0">
         <NavBar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   )

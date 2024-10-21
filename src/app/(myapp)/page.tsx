@@ -7,7 +7,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="w-screen overflow-hidden flex flex-col justify-center items-center align-middle box-border mt-20 gap-20">
+    <div className="w-[screen] overflow-hidden flex flex-col justify-center items-center align-middle box-border mt-20 gap-20">
       <Hero />
       <BasicCard />
       <BasicCard reverse={true} />
