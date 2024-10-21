@@ -9,7 +9,7 @@ interface CardItemsProps {
 
 const CardItems: React.FC<CardItemsProps> = ({ quantity, product }) => {
   return (
-    <div className="flex items-center gap-9">
+    <div className="flex items-center gap-4 md:gap-9">
       <div className="relative h-6 w-6">
         <Image
           alt="Mountains"
@@ -21,7 +21,7 @@ const CardItems: React.FC<CardItemsProps> = ({ quantity, product }) => {
           }}
         />
       </div>
-      <p className="text-2xl font-medium leading-normal">{`${quantity}x ${product}`}</p>
+      <p className="text-[1.2rem] md:text-2xl font-medium leading-normal">{`${quantity}x ${product}`}</p>
     </div>
   )
 }
