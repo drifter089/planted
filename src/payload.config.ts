@@ -5,6 +5,8 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
+import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
+import { gcsStorage } from '@payloadcms/storage-gcs'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -30,6 +32,18 @@ export default buildConfig({
   }),
   sharp,
   plugins: [
-    // storage-adapter-placeholder
+    // Pass the plugin to Payload
+    gcsStorage({
+      collections: {
+        media: {
+          prefix: 'media',
+        },
+      },
+      options: {
+        // you can choose any method for authentication, and authorization which is being provided by `@google-cloud/storage`
+        keyFilename: './gcp_key.json',
+      },
+      bucket: process.env.GCS_BUCKET,
+    }),
   ],
 })
