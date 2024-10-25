@@ -5,7 +5,6 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
-import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
 import { gcsStorage } from '@payloadcms/storage-gcs'
 
 import { Users } from './collections/Users'
