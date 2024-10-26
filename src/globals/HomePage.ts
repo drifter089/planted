@@ -1,3 +1,4 @@
+import { BasicCard } from '@/blocks/BasicCard/config'
 import { GlobalConfig } from 'payload'
 
 export const HomePage: GlobalConfig = {
@@ -61,19 +62,23 @@ export const HomePage: GlobalConfig = {
             },
           ],
         },
+        {
+          label: 'Basic Cards Section',
+          description: 'This is the basic cards section',
+          fields: [
+            {
+              name: 'basicCardSection',
+              label: 'Basic Cards', // required
+              type: 'blocks',
+              blocks: [BasicCard],
+            },
+          ],
+        },
         // {
-        //   name: 'tabTwo',
-        //   label: 'Tab Two Label', // required
-        //   interfaceName: 'TabTwo', // optional (`name` must be present)
-        //   fields: [
-        //     // required
-        //     {
-        //       name: 'numberField', // accessible via tabTwo.numberField
-        //       type: 'number',
-        //       required: true,
-        //     },
-        //   ],
-        // },
+        //   label: 'Price Card Section',
+        //   description: 'This is the price card section',
+
+        // }
       ],
     },
   ],

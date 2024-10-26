@@ -162,8 +162,22 @@ export interface Homepage {
   subHeading: string;
   overveiwWidget?: OverveiwWidget;
   heroImage: string | Media;
+  basicCardSection?: BasicCard[] | null;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BasicCard".
+ */
+export interface BasicCard {
+  heading: string;
+  subheading: string;
+  cardImage: string | Media;
+  reverse?: boolean | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'basiccard';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

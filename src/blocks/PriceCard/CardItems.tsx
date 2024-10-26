@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import leafsng from '../../../../public/images/leaf.svg'
+import leafsng from '../../../public/images/leaf.svg'
 
 interface CardItemsProps {
   quantity: number

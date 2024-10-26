@@ -1,5 +1,5 @@
 import React from 'react'
-import { PriceCard } from './PriceCard/PriceCard'
+import { PriceCard } from '../../blocks/PriceCard/PriceCard'
 
 const PriceCardSection = () => {
   return (
