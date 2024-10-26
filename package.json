@@ -20,7 +20,7 @@
     "@payloadcms/plugin-cloud": "beta",
     "@payloadcms/plugin-cloud-storage": "^3.0.0-beta.115",
     "@payloadcms/richtext-lexical": "beta",
-    "@payloadcms/storage-gcs": "^3.0.0-beta.29",
+    "@payloadcms/storage-gcs": "3.0.0-beta.115",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
