@@ -163,6 +163,7 @@ export interface Homepage {
   overveiwWidget?: OverveiwWidget;
   heroImage: string | Media;
   basicCardSection?: BasicCard[] | null;
+  priceCard?: PriceCard[] | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -178,6 +179,22 @@ export interface BasicCard {
   id?: string | null;
   blockName?: string | null;
   blockType: 'basiccard';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PriceCard".
+ */
+export interface PriceCard {
+  quantityOne: number;
+  productOne: string;
+  quantityTwo: number;
+  productTwo: string;
+  priceMain: number;
+  priceSuper: number;
+  duration: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'pricecard';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

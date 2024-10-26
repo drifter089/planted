@@ -1,7 +1,6 @@
 import BasicCard from '@/blocks/BasicCard/BasicCard'
 import Hero from '@/components/Hero/Hero'
 import { PlantCarousel } from '@/components/PlantCarousel/PlantCarousel'
-import PriceCardSection from '@/components/PricecardSection/PriceCardSection'
 import TextBanner from '@/components/TextBanner/TextBanner'
 import React from 'react'
 
@@ -9,6 +8,7 @@ import type { Config } from 'src/payload-types'
 
 import configPromise from '@payload-config'
 import { getPayloadHMR } from '@payloadcms/next/utilities'
+import { PriceCard } from '@/blocks/PriceCard/PriceCard'
 
 async function Page(): Promise<React.ReactElement> {
   const payload = await getPayloadHMR({ config: configPromise })
@@ -25,11 +25,15 @@ async function Page(): Promise<React.ReactElement> {
       {/* update basic card to ame image work  */}
       {pageData.basicCardSection &&
         pageData.basicCardSection.map((card) => {
-          console.log('card', card)
           return <BasicCard key={card.id} {...card} />
         })}
       <TextBanner subGreenText={'our plants'} mainText={'plants that survive'} />
-      <PriceCardSection />
+      <div className="bg-[#FFF7E7] w-screen h-auto py-16 flex justify-center items-center gap-28 flex-wrap">
+        {pageData.priceCard &&
+          pageData.priceCard.map((card) => {
+            return <PriceCard key={card.id} {...card} />
+          })}
+      </div>
       <TextBanner subGreenText={'our seeds'} mainText={'choose from 40+ seeds'} />
       <PlantCarousel />
     </div>

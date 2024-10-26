@@ -3,16 +3,7 @@ import GreenButton from '@/components/GreenButton/GreenButton'
 import RateSuperText from './RateSuperText'
 import CardItems from './CardItems'
 import PlanHeader from './PlanHeader'
-
-type PriceCardType = {
-  quantityOne: number
-  productOne: string
-  quantityTwo: number
-  productTwo: string
-  priceMain: number
-  priceSuper: number
-  duration: string
-}
+import type { PriceCard as PriceCardType } from '@/payload-types'
 
 export const PriceCard: React.FC<PriceCardType> = ({
   quantityOne,

@@ -1,4 +1,5 @@
 import { BasicCard } from '@/blocks/BasicCard/config'
+import { PriceCard } from '@/blocks/PriceCard/config'
 import { GlobalConfig } from 'payload'
 
 export const HomePage: GlobalConfig = {
@@ -74,11 +75,18 @@ export const HomePage: GlobalConfig = {
             },
           ],
         },
-        // {
-        //   label: 'Price Card Section',
-        //   description: 'This is the price card section',
-
-        // }
+        {
+          label: 'Price Cards Section',
+          description: 'This is the Price cards section',
+          fields: [
+            {
+              name: 'priceCard',
+              label: 'Price Cards',
+              type: 'blocks',
+              blocks: [PriceCard],
+            },
+          ],
+        },
       ],
     },
   ],
