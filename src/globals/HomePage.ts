@@ -76,6 +76,23 @@ export const HomePage: GlobalConfig = {
           ],
         },
         {
+          name: 'firstTextBanner',
+          label: 'First Basic Bannner',
+          description: 'This is the basic banner between the basic and price cards sections',
+          fields: [
+            {
+              name: 'subgreenText',
+              label: 'small green text',
+              type: 'text',
+            },
+            {
+              name: 'mainText',
+              label: 'Main Text',
+              type: 'text',
+            },
+          ],
+        },
+        {
           label: 'Price Cards Section',
           description: 'This is the Price cards section',
           fields: [
@@ -84,6 +101,23 @@ export const HomePage: GlobalConfig = {
               label: 'Price Cards',
               type: 'blocks',
               blocks: [PriceCard],
+            },
+          ],
+        },
+        {
+          name: 'secondTextBanner',
+          label: 'Second Basic Bannner',
+          description: 'This is the basic banner after the price cards sections',
+          fields: [
+            {
+              name: 'subgreenText',
+              label: 'small green text',
+              type: 'text',
+            },
+            {
+              name: 'mainText',
+              label: 'Main Text',
+              type: 'text',
             },
           ],
         },

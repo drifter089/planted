@@ -163,7 +163,15 @@ export interface Homepage {
   overveiwWidget?: OverveiwWidget;
   heroImage: string | Media;
   basicCardSection?: BasicCard[] | null;
+  firstTextBanner?: {
+    subgreenText?: string | null;
+    mainText?: string | null;
+  };
   priceCard?: PriceCard[] | null;
+  secondTextBanner?: {
+    subgreenText?: string | null;
+    mainText?: string | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }

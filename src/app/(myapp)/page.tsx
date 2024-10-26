@@ -27,14 +27,20 @@ async function Page(): Promise<React.ReactElement> {
         pageData.basicCardSection.map((card) => {
           return <BasicCard key={card.id} {...card} />
         })}
-      <TextBanner subGreenText={'our plants'} mainText={'plants that survive'} />
+      <TextBanner {...pageData} />
       <div className="bg-[#FFF7E7] w-screen h-auto py-16 flex justify-center items-center gap-28 flex-wrap">
         {pageData.priceCard &&
           pageData.priceCard.map((card) => {
             return <PriceCard key={card.id} {...card} />
           })}
       </div>
-      <TextBanner subGreenText={'our seeds'} mainText={'choose from 40+ seeds'} />
+      <TextBanner
+        id={''}
+        mainHeading={''}
+        subHeading={''}
+        heroImage={''}
+        firstTextBanner={pageData.secondTextBanner}
+      />
       <PlantCarousel />
     </div>
   )
