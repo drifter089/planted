@@ -12,6 +12,7 @@ import { Media } from './collections/Media'
 
 import { HomePage } from './globals/HomePage'
 import { BasicCard } from './blocks/BasicCard/config'
+import { AboutPage } from './globals/AboutPage'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -24,7 +25,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media],
-  globals: [HomePage],
+  globals: [HomePage, AboutPage],
   // blocks: [BasicCard],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',

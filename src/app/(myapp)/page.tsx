@@ -4,8 +4,6 @@ import { PlantCarousel } from '@/components/PlantCarousel/PlantCarousel'
 import TextBanner from '@/components/TextBanner/TextBanner'
 import React from 'react'
 
-import type { Config } from 'src/payload-types'
-
 import configPromise from '@payload-config'
 import { getPayloadHMR } from '@payloadcms/next/utilities'
 import { PriceCard } from '@/blocks/PriceCard/PriceCard'
@@ -27,7 +25,10 @@ async function Page(): Promise<React.ReactElement> {
         pageData.basicCardSection.map((card) => {
           return <BasicCard key={card.id} {...card} />
         })}
-      <TextBanner {...pageData} />
+      <TextBanner
+        subgreenText={pageData.firstTextBanner.subgreenText}
+        mainText={pageData.firstTextBanner?.mainText}
+      />
       <div className="bg-[#FFF7E7] w-screen h-auto py-16 flex justify-center items-center gap-28 flex-wrap">
         {pageData.priceCard &&
           pageData.priceCard.map((card) => {
@@ -35,11 +36,8 @@ async function Page(): Promise<React.ReactElement> {
           })}
       </div>
       <TextBanner
-        id={''}
-        mainHeading={''}
-        subHeading={''}
-        heroImage={''}
-        firstTextBanner={pageData.secondTextBanner}
+        subgreenText={pageData.secondTextBanner.subgreenText}
+        mainText={pageData.secondTextBanner?.mainText}
       />
       <PlantCarousel />
     </div>

@@ -34,6 +34,7 @@ export interface Config {
   };
   globals: {
     homepage: Homepage;
+    aboutpage: Aboutpage;
   };
   locale: null;
   user: User & {
@@ -163,14 +164,14 @@ export interface Homepage {
   overveiwWidget?: OverveiwWidget;
   heroImage: string | Media;
   basicCardSection?: BasicCard[] | null;
-  firstTextBanner?: {
-    subgreenText?: string | null;
-    mainText?: string | null;
+  firstTextBanner: {
+    subgreenText: string;
+    mainText: string;
   };
   priceCard?: PriceCard[] | null;
-  secondTextBanner?: {
-    subgreenText?: string | null;
-    mainText?: string | null;
+  secondTextBanner: {
+    subgreenText: string;
+    mainText: string;
   };
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -203,6 +204,34 @@ export interface PriceCard {
   id?: string | null;
   blockName?: string | null;
   blockType: 'pricecard';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "aboutpage".
+ */
+export interface Aboutpage {
+  id: string;
+  mainHeading: string;
+  aboutImage: string | Media;
+  subHeading: string;
+  aboutCard?: AboutCard[] | null;
+  greenTextBanner: string;
+  overveiwWidget?: OverveiwWidget;
+  subgreenText: string;
+  mainBannerText: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "AboutCard".
+ */
+export interface AboutCard {
+  cardImage: string | Media;
+  cardText?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'aboutcard';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
