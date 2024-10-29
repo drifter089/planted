@@ -25,6 +25,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    blogpages: Blogpage;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -98,6 +99,32 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blogpages".
+ */
+export interface Blogpage {
+  id: string;
+  name: string;
+  slug: string;
+  mainHeading: string;
+  subHeading: string;
+  heroImage: string | Media;
+  layout?: BlogPara[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "BlogPara".
+ */
+export interface BlogPara {
+  paraHeading: string;
+  paraText?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'blogpara';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -110,6 +137,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: string | Media;
+      } | null)
+    | ({
+        relationTo: 'blogpages';
+        value: string | Blogpage;
       } | null);
   globalSlug?: string | null;
   user: {
