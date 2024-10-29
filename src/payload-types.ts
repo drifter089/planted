@@ -259,7 +259,8 @@ export interface Aboutpage {
  */
 export interface AboutCard {
   cardImage: string | Media;
-  cardText?: string | null;
+  cardText: string;
+  reverse: boolean;
   id?: string | null;
   blockName?: string | null;
   blockType: 'aboutcard';

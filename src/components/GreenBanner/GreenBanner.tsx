@@ -5,7 +5,7 @@ type type = {
 }
 
 const GreenBanner: React.FC<type> = ({ text }) => {
-  return <div className="bg-green-800 p-10">{text}</div>
+  return <p className="bg-green-800 p-5 md:p-10 lg:p-20 text-center">{text}</p>
 }
 
 export default GreenBanner

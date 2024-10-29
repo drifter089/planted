@@ -10,12 +10,12 @@ type OverveiwWigetProps = {
 
 const OverveiwWiget = (props: [OverveiwWigetProps] | any) => {
   return (
-    <div className="flex justify-start items-center gap-12">
+    <div className="flex justify-center items-center gap-12">
       {props.overVeiwData.map((item: OverveiwWigetProps) => (
         <>
           <div className="flex flex-col justify-start items-start" key={item.id}>
-            <p className="text-3xl md:text-5xl font-bold text-left ">{item.value}+</p>
-            <p className="text-xl md:text-2xl text-left">{item.achivement}</p>
+            <p className="text-2xl md:text-5xl font-bold text-left ">{item.value}+</p>
+            <p className="text-[0.8rem] md:text-2xl text-left">{item.achivement}</p>
           </div>
         </>
       ))}

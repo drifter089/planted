@@ -14,6 +14,13 @@ export const AboutCardType: Block = {
       name: 'cardText',
       type: 'textarea',
       label: 'add text with image',
+      required: true,
+    },
+    {
+      name: 'reverse',
+      type: 'checkbox',
+      label: 'Reverse Order',
+      required: true,
     },
   ],
 }
