@@ -8,7 +8,7 @@ type OverveiwWigetProps = {
   id: string
 }
 
-const OverveiwWiget = (props: [OverveiwWigetProps] | any) => {
+export default function OverveiwWiget(props: [OverveiwWigetProps] | any) {
   return (
     <div className="flex justify-center items-center gap-12">
       {props.overVeiwData.map((item: OverveiwWigetProps) => (
@@ -22,5 +22,3 @@ const OverveiwWiget = (props: [OverveiwWigetProps] | any) => {
     </div>
   )
 }
-
-export default OverveiwWiget

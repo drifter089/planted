@@ -2,7 +2,7 @@
 import React from 'react'
 
 import Image from 'next/image'
-import OverveiwWiget from './OverveiwWiget'
+// import OverveiwWiget from './OverveiwWiget'
 import MainHeader from './MainHeader'
 import { Button } from '../ui/button'
 import GreenButton from '../GreenButton/GreenButton'
@@ -24,7 +24,7 @@ async function Hero(props: HomePageProps): Promise<React.ReactElement> {
           get seeds
         </Button> */}
         <GreenButton />
-        <OverveiwWiget overVeiwData={props.overveiwWidget} />
+        {/* <OverveiwWiget overVeiwData={props.overveiwWidget} /> */}
       </div>
       <div className="relative w-[80vw] h-[20rem] md:h-[50rem] lg:w-[50%] lg:h-[60rem] ">
         <Image
