@@ -5,7 +5,7 @@ import AboutMain from '@/components/AboutMain/AboutMain'
 import AboutCard from '@/blocks/AboutCard/AboutCard'
 import GreenBanner from '@/components/GreenBanner/GreenBanner'
 import TextBanner from '@/components/TextBanner/TextBanner'
-import OverveiwWiget from '@/components/Hero/OverveiwWiget'
+// import OverveiwWiget from '@/components/Hero/OverveiwWiget'
 
 async function Page(): Promise<React.ReactElement> {
   const payload = await getPayloadHMR({ config: configPromise })
@@ -23,7 +23,7 @@ async function Page(): Promise<React.ReactElement> {
           return <AboutCard key={card.id} {...card} />
         })}
       <GreenBanner text={pageData.greenTextBanner} />
-      <OverveiwWiget overVeiwData={pageData.overveiwWidget} />
+      {/* <OverveiwWiget overVeiwData={pageData.overveiwWidget} /> */}
       <TextBanner subgreenText={pageData.subgreenText} mainText={pageData.mainBannerText} />
     </div>
   )
