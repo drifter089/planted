@@ -12,6 +12,7 @@ import BlogPara from '@/blocks/BlogPara/BlogPara'
 import BlogHero from './components/BlogHero'
 
 const queryPageBySlug = cache(async ({ slug }: { slug: string }) => {
+
   const parsedSlug = decodeURIComponent(slug)
 
   const payload = await getPayloadHMR({ config })
@@ -55,15 +56,17 @@ export default async function Page({ params: { slug = 'index' } }) {
 
   return (
     <>
-      <BlogHero
-        heroImage={page.heroImage}
-        mainheading={page.mainHeading}
-        subheading={page.subHeading}
-      />
-      {page.layout &&
-        page.layout.map((block) => {
-          return <BlogPara key={block.id} {...block} />
-        })}
+      <div className="w-[screen] overflow-hidden flex flex-col justify-center align-middle box-border mx-4 md:mx-16 lg:mx-32 xl:mx-64 mt-16 gap-1 md:gap-2 2xl:gap-4">
+        <BlogHero
+          heroImage={page.heroImage}
+          mainheading={page.mainHeading}
+          subheading={page.subHeading}
+        />
+        {page.layout &&
+          page.layout.map((block) => {
+            return <BlogPara key={block.id} {...block} />
+          })}
+      </div>
     </>
   )
 }

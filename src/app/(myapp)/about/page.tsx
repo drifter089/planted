@@ -16,7 +16,7 @@ async function Page(): Promise<React.ReactElement> {
 
   console.log('pageData', pageData)
   return (
-    <div className="text-[1.5rem] md:text-[2.25rem] w-[screen] overflow-hidden flex flex-col justify-center items-center align-middle box-border mt-4 gap-11 md:gap-20 2xl:gap-24">
+    <div className="text-[1.5rem] md:text-[2.25rem] w-[screen] overflow-hidden flex flex-col justify-center items-center align-middle box-border mt-16 gap-11 md:gap-20 2xl:gap-24">
       <AboutMain {...pageData} />
       {pageData.aboutCard &&
         pageData.aboutCard.map((card) => {

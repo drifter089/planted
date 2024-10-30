@@ -18,7 +18,7 @@ async function Page(): Promise<React.ReactElement> {
   console.log('pageData', pageData)
 
   return (
-    <div className="w-[screen] overflow-hidden flex flex-col justify-center items-center align-middle box-border mt-4 gap-11 md:gap-20 2xl:gap-24">
+    <div className="w-[screen] overflow-hidden flex flex-col justify-start items-center align-middle box-border gap-11 md:gap-20 2xl:gap-24">
       <Hero {...pageData} />
       {/* update basic card to ame image work  */}
       {pageData.basicCardSection &&
