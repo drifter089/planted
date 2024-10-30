@@ -204,6 +204,9 @@ export interface Homepage {
     subgreenText: string;
     mainText: string;
   };
+  logo: {
+    logo: string | Media;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }

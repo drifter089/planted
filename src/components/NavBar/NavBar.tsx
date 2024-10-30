@@ -15,25 +15,22 @@ const NavBar = () => {
   }, [pathname])
 
   return (
-    <div className="fixed left-0 bottom-0 transform md:translate-y-[-10rem] z-20 max-w-screen/4 bg-transparent p-3">
-      <div className="flex flex-col flex-wrap justify-end gap-1">
-        <div className="text-3xl align-text-top-middle">Navigation</div>
-        <Button variant={pathname === '/' ? 'default' : 'outline'} onClick={() => router.push('/')}>
-          Home
-        </Button>
-        <Button
-          variant={pathname === '/about' ? 'default' : 'outline'}
-          onClick={() => router.push('/about')}
-        >
-          About
-        </Button>
-        <Button
-          variant={pathname === '/blogpage' ? 'default' : 'outline'}
-          onClick={() => router.push('/blogpage')}
-        >
-          Blog
-        </Button>
-      </div>
+    <div className="w-screen h-[15vh] flex flex-wrap justify-between items-center gap-1 border px-36">
+      <Button variant={pathname === '/' ? 'default' : 'outline'} onClick={() => router.push('/')}>
+        Home
+      </Button>
+      <Button
+        variant={pathname === '/about' ? 'default' : 'outline'}
+        onClick={() => router.push('/about')}
+      >
+        About
+      </Button>
+      <Button
+        variant={pathname === '/blogpage' ? 'default' : 'outline'}
+        onClick={() => router.push('/blogpage')}
+      >
+        Blog
+      </Button>
     </div>
   )
 }

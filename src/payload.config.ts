@@ -14,6 +14,8 @@ import { HomePage } from './globals/HomePage'
 import { BasicCard } from './blocks/BasicCard/config'
 import { AboutPage } from './globals/AboutPage'
 import { Page } from './collections/Page'
+// const { PubSub } = require('@google-cloud/pubsub')
+import { PubSub } from '@google-cloud/pubsub'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -47,7 +49,8 @@ export default buildConfig({
       },
       options: {
         // you can choose any method for authentication, and authorization which is being provided by `@google-cloud/storage`
-        keyFilename: './gcp_key.json',
+        // keyFilename: './gcp_key.json',
+        credentials: JSON.parse(process.env.GCS_KEYFILE || '{}'),
       },
       bucket: process.env.GCS_BUCKET || '',
     }),

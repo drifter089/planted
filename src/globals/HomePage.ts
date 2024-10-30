@@ -125,6 +125,19 @@ export const HomePage: GlobalConfig = {
             },
           ],
         },
+        {
+          name: 'logo',
+          label: 'Logo',
+          fields: [
+            {
+              name: 'logo',
+              label: 'Logo',
+              type: 'upload',
+              relationTo: 'media',
+              required: true,
+            },
+          ],
+        },
       ],
     },
   ],
